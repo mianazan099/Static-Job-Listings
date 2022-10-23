@@ -16,82 +16,59 @@
     <header
       class="h-48 bg-header-lg bg-cyan-500 bg-center bg-cover bg-no-repeat"
     ></header>
-    <main class="p-6 pt-12 max-w-7xl mx-auto">
+    <main
+      class="parent p-6 pt-12 max-w-7xl mx-auto space-y-12 md:space-y-6"
+    ></main>
+    <template>
       <div
-        class="bg-white relative rounded-lg p-6 pt-8 shadow-2xl shadow-cyan-500/25 right-line md:px-8 md:flex md:gap-4 md:items-center md:justify-between"
+        class="card bg-white relative rounded-lg p-6 pt-8 shadow-2xl shadow-cyan-500/25 md:px-8 md:flex md:gap-4 md:items-center md:justify-between"
       >
         <div class="sm:flex">
           <div class="absolute -top-6 left-6 sm:static sm:mr-4">
-            <img
-              class="aspect-square h-12 sm:h-24"
-              src="./images/photosnap.svg"
-              alt=""
-            />
+            <img class="logo aspect-square h-12 sm:h-24" src="" alt="" />
           </div>
           <div class="flex gap-2 flex-col justify-center mb-4 md:mb-0">
             <div class="flex gap-6 items-center md:gap-5">
-              <p class="text-cyan-500 font-bold capitalize md:text-base">
-                photosnap
-              </p>
+              <p
+                class="text-cyan-500 font-bold capitalize md:text-base company"
+              ></p>
               <div class="flex gap-2">
                 <div
-                  class="bg-cyan-500 px-2 py-0.5 text-white uppercase rounded-full text-sm font-bold md:py-1 md:px-3"
+                  class="bg-cyan-500 px-2 py-0.5 text-white uppercase rounded-full text-sm font-bold md:py-1 md:px-3 new"
                 >
                   NEW!
                 </div>
                 <div
-                  class="bg-cyan-900 px-2 py-0.5 text-white uppercase rounded-full text-sm font-bold md:py-1 md:px-3"
+                  class="bg-cyan-900 px-2 py-0.5 text-white uppercase rounded-full text-sm font-bold md:py-1 md:px-3 featured"
                 >
                   FEATURED
                 </div>
               </div>
             </div>
-            <h3 class="text-cyan-900 font-bold text-xl tracking-wide">
-              Senior Frontend Developer
-            </h3>
+            <h3
+              class="text-cyan-900 font-bold text-xl tracking-wide position"
+            ></h3>
             <div class="text-cyan-700">
-              <span>1d ago</span>
+              <span class="postedAt"></span>
               <span
-                class="before:content-['•'] before:pr-2 before:pl-1 md:before:pr-4 md:before:pl-3"
-                >Full Time
+                class="contract before:content-['•'] before:pr-2 before:pl-1 md:before:pr-4 md:before:pl-3"
+              >
               </span>
               <span
-                class="before:content-['•'] before:pr-2 before:pl-1 md:before:pr-4 md:before:pl-3"
-                >USA only
+                class="location before:content-['•'] before:pr-2 before:pl-1 md:before:pr-4 md:before:pl-3"
+              >
               </span>
             </div>
           </div>
         </div>
         <hr class="text-cyan-700 my-4 md:hidden" />
-        <div class="flex gap-4 flex-wrap">
+        <div class="tag-container flex gap-4 flex-wrap">
           <div
-            class="text-cyan-500 bg-cyan-50 cursor-pointer px-2 py-1 font-bold rounded"
-          >
-            Frontend
-          </div>
-          <div
-            class="text-cyan-500 bg-cyan-50 cursor-pointer px-2 py-1 font-bold rounded"
-          >
-            Senior
-          </div>
-          <div
-            class="text-cyan-500 bg-cyan-50 cursor-pointer px-2 py-1 font-bold rounded"
-          >
-            HTML
-          </div>
-          <div
-            class="text-cyan-500 bg-cyan-50 cursor-pointer px-2 py-1 font-bold rounded"
-          >
-            CSS
-          </div>
-          <div
-            class="text-cyan-500 bg-cyan-50 cursor-pointer px-2 py-1 font-bold rounded"
-          >
-            JavaScript
-          </div>
+            class="tag text-cyan-500 bg-cyan-50 cursor-pointer px-2 py-1 font-bold rounded"
+          ></div>
         </div>
       </div>
-    </main>
+    </template>
     <script src="./data.js"></script>
     <script src="./script.js"></script>
   </body>

@@ -573,19 +573,14 @@ video {
   left: 1.5rem;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-4 {
@@ -642,6 +637,12 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.space-y-12 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
 .rounded-lg {
@@ -790,6 +791,10 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .right-line::before {
   content: "";
   position: absolute;
@@ -836,15 +841,6 @@ video {
 }
 
 @media (min-width: 928px) {
-  .md\:mx-4 {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .md\:ml-4 {
-    margin-left: 1rem;
-  }
-
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -873,6 +869,17 @@ video {
     gap: 1.25rem;
   }
 
+  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .md\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
@@ -883,39 +890,9 @@ video {
     padding-right: 0.75rem;
   }
 
-  .md\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .md\:before\:pr-3::before {
-    content: var(--tw-content);
-    padding-right: 0.75rem;
-  }
-
-  .md\:before\:pl-2::before {
-    content: var(--tw-content);
-    padding-left: 0.5rem;
-  }
-
-  .md\:before\:pr-5::before {
-    content: var(--tw-content);
-    padding-right: 1.25rem;
-  }
-
-  .md\:before\:pl-4::before {
-    content: var(--tw-content);
-    padding-left: 1rem;
   }
 
   .md\:before\:pr-4::before {
