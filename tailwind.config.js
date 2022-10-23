@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./*.{html,js}"],
   theme: {
     colors: {
       cyan: {
@@ -10,6 +10,7 @@ module.exports = {
         100: "hsl(180, 52%, 96%)",
         50: "hsl(180, 31%, 95%)",
       },
+      white: "#FFFFFF",
     },
     fontFamily: {
       sans: ["League Spartan", "sans-serif"],
@@ -17,6 +18,10 @@ module.exports = {
     backgroundImage: {
       "header-lg": "url(./images/bg-header-desktop.svg)",
       "header-sm": "url(./images/bg-header-mobile.svg)",
+    },
+    screens: {
+      sm: "640px",
+      md: "928px",
     },
     extend: {},
   },
