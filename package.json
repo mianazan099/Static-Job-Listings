@@ -1,0 +1,14 @@
+{
+  "name": "static-job-listings",
+  "version": "1.0.0",
+  "description": "Design preview for the Job listings with filtering coding challenge",
+  "main": "index.html",
+  "scripts": {
+    "start": "tailwindcss -i ./input.css -o ./style.css --watch"
+  },
+  "author": "Mian Azan",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
