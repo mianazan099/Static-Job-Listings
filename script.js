@@ -29,3 +29,11 @@ data.forEach((data) => {
       .forEach((card) => card.classList.add("right-line"));
   }
 });
+
+const tagList = document.querySelectorAll(".tag");
+
+tagList.forEach((tag) => {
+  tag.addEventListener("click", function (e) {
+    console.log(tag.textContent);
+  });
+});
