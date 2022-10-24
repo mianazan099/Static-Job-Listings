@@ -3,7 +3,7 @@ const parent = document.querySelector(".parent");
 
 data.forEach((data) => {
   const clone = template.content.cloneNode(true);
-  clone.querySelector(".logo").src = data.logo;
+  clone.querySelector(".logo img").src = data.logo;
   clone.querySelector(".company").innerText = data.company;
   if (!data.new) clone.querySelector(".new").remove();
   if (!data.featured) clone.querySelector(".featured").remove();
@@ -11,17 +11,17 @@ data.forEach((data) => {
   clone.querySelector(".postedAt").innerText = data.postedAt;
   clone.querySelector(".contract").innerText = data.contract;
   clone.querySelector(".location").innerText = data.location;
-  let tagList = [];
-  tagList.push(data.role);
-  tagList.push(data.level);
-  tagList = [...tagList, ...data.languages, ...data.tools];
+  let tabletList = [];
+  tabletList.push(data.role);
+  tabletList.push(data.level);
+  tabletList = [...tabletList, ...data.languages, ...data.tools];
   console.clear();
-  tagList.forEach((tag) => {
-    let newTag = clone.querySelector(".tag").cloneNode(true);
-    newTag.innerText = tag;
-    clone.querySelector(".tag-container").appendChild(newTag);
+  tabletList.forEach((tablet) => {
+    let newtablet = clone.querySelector(".tablet").cloneNode(true);
+    newtablet.innerText = tablet;
+    clone.querySelector(".tablet-container").appendChild(newtablet);
   });
-  clone.querySelector(".tag:first-of-type").remove();
+  clone.querySelector(".tablet:first-of-type").remove();
   parent.appendChild(clone);
   if (data.featured) {
     document
@@ -30,10 +30,10 @@ data.forEach((data) => {
   }
 });
 
-const tagList = document.querySelectorAll(".tag");
+const tabletList = document.querySelectorAll(".tablet");
 
-tagList.forEach((tag) => {
-  tag.addEventListener("click", function (e) {
-    console.log(tag.textContent);
+tabletList.forEach((tablet) => {
+  tablet.addEventListener("click", function (e) {
+    console.log(tablet.textContent);
   });
 });

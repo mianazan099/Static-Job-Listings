@@ -12,68 +12,47 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Frontend Mentor | Job Listings</title>
   </head>
-  <body class="bg-cyan-100 text-[15px]">
-    <header
-      class="h-48 bg-header-lg bg-cyan-500 bg-center bg-cover bg-no-repeat"
-    ></header>
-    <main
-      class="parent p-6 max-w-7xl mx-auto space-y-12 md:space-y-6 relative -top-16"
-    >
-      <div class="bg-white flex gap-4 flex-wrap p-4 rounded-lg my-4 mb-16">
-        <div>pokemon</div>
-        <div>pokemon</div>
-        <div>pokemon</div>
-        <div>pokemon</div>
-        <div>pokemon</div>
+  <body>
+    <header></header>
+    <main>
+      <div class="parent">
+        <div class="search">
+          <div class="tablets">
+            <div>pokemon</div>
+            <div>pokemon</div>
+            <div>pokemon</div>
+            <div>pokemon</div>
+            <div>pokemon</div>
+          </div>
+          <p class="clear">Clear</p>
+        </div>
       </div>
     </main>
     <template>
-      <div
-        class="card bg-white relative rounded-lg p-6 pt-8 shadow-2xl shadow-cyan-500/25 md:px-8 md:flex md:gap-4 md:items-center md:justify-between"
-      >
-        <div class="sm:flex">
-          <div class="absolute -top-6 left-6 sm:static sm:mr-4">
-            <img class="logo aspect-square h-12 sm:h-24" src="" alt="" />
+      <div class="card">
+        <div class="left">
+          <div class="logo">
+            <img src="" alt="" />
           </div>
-          <div class="flex gap-2 flex-col justify-center mb-4 md:mb-0">
-            <div class="flex gap-6 items-center md:gap-5">
-              <p
-                class="text-cyan-500 font-bold capitalize md:text-base company"
-              ></p>
-              <div class="flex gap-2">
-                <div
-                  class="bg-cyan-500 px-2 py-0.5 text-white uppercase rounded-full text-sm font-bold md:py-1 md:px-3 new"
-                >
-                  NEW!
-                </div>
-                <div
-                  class="bg-cyan-900 px-2 py-0.5 text-white uppercase rounded-full text-sm font-bold md:py-1 md:px-3 featured"
-                >
-                  FEATURED
-                </div>
+          <div class="content">
+            <div class="info">
+              <p class="company"></p>
+              <div class="tags">
+                <div class="new">NEW!</div>
+                <div class="featured">FEATURED</div>
               </div>
             </div>
-            <h3
-              class="text-cyan-900 font-bold text-xl tracking-wide position"
-            ></h3>
-            <div class="text-cyan-700">
+            <h3 class="position"></h3>
+            <div class="post-info">
               <span class="postedAt"></span>
-              <span
-                class="contract before:content-['•'] before:pr-2 before:pl-1 md:before:pr-4 md:before:pl-3"
-              >
-              </span>
-              <span
-                class="location before:content-['•'] before:pr-2 before:pl-1 md:before:pr-4 md:before:pl-3"
-              >
-              </span>
+              <span class="contract"></span>
+              <span class="location"></span>
             </div>
           </div>
         </div>
-        <hr class="text-cyan-700 my-4 md:hidden" />
-        <div class="tag-container flex gap-4 flex-wrap">
-          <div
-            class="tag text-cyan-500 bg-cyan-50 cursor-pointer px-2 py-1 font-bold rounded"
-          ></div>
+        <hr />
+        <div class="tablet-container">
+          <div class="tablet"></div>
         </div>
       </div>
     </template>

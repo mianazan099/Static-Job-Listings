@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
 
 :root {
-  --clr-cyan-900: "hsl(180, 14%, 20%)";
-  --clr-cyan-700: "hsl(180, 8%, 52%)";
-  --clr-cyan-500: "hsl(180, 29%, 50%)";
-  --clr-cyan-100: "hsl(180, 52%, 96%)";
-  --clr-cyan-50: "hsl(180, 31%, 95%)";
-  --clr-white: "#FFFFFF";
+  --clr-cyan-900: hsl(180, 14%, 20%);
+  --clr-cyan-700: hsl(180, 8%, 52%);
+  --clr-cyan-500: hsl(180, 29%, 50%);
+  --clr-cyan-100: hsl(180, 52%, 96%);
+  --clr-cyan-50: hsl(180, 31%, 95%);
+  --clr-white: #ffffff;
   --ff: "League Spartan", sans-serif;
 }
 
@@ -19,6 +19,16 @@
 * {
   margin: 0;
   padding: 0;
+  font: inherit;
+}
+
+header {
+  height: 150px;
+  background-image: url(./images/bg-header-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--clr-cyan-500);
 }
 
 body {
@@ -26,4 +36,190 @@ body {
   font-family: var(--ff);
   font-size: 15px;
   font-weight: 500;
+  background-color: var(--clr-cyan-100);
+}
+
+main {
+  position: relative;
+}
+
+.parent {
+  padding: 24px;
+  max-width: 1000px;
+  margin-inline: auto;
+  display: grid;
+  gap: 48px;
+  position: absolute;
+  top: -64px;
+}
+
+.search {
+  background-color: var(--clr-white);
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+}
+
+.tablets {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 75%;
+}
+
+.tablets > div {
+  color: var(--clr-cyan-500);
+  background-color: var(--clr-cyan-50);
+  cursor: pointer;
+  padding-inline: 8px;
+  padding-block: 4px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.clear {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  color: var(--clr-cyan-700);
+  font-weight: 700;
+}
+
+.card {
+  background-color: var(--clr-white);
+  position: relative;
+  border-radius: 8px;
+  padding: 24px;
+  padding-top: 32px;
+  box-shadow: 0 10px 15px -3px hsl(180 29% 50% / 0.25),
+    0 4px 6px -4px hsl(180 29% 50% / 0.25);
+}
+
+.logo {
+  position: absolute;
+  top: -24px;
+  left: 24px;
+}
+
+.logo img {
+  height: 48px;
+  width: 48px;
+}
+
+.content {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.info {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.company {
+  color: var(--clr-cyan-500);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+}
+
+.new,
+.featured {
+  background-color: var(--clr-cyan-500);
+  padding-inline: 8px;
+  padding-block: 14px 12px;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 0;
+}
+
+.featured {
+  background-color: var(--clr-cyan-900);
+}
+
+.position {
+  color: var(--clr-cyan-900);
+  font-weight: 700;
+}
+
+.post-info {
+  color: var(--clr-cyan-700);
+}
+
+.post-info > *:not(:first-child)::before {
+  content: "•";
+  margin-inline: 8px 12px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--clr-cyan-700);
+  margin-block: 16px;
+}
+
+.tablet-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tablet {
+  color: var(--clr-cyan-500);
+  background-color: var(--clr-cyan-50);
+  cursor: pointer;
+  padding-inline: 8px;
+  padding-block: 4px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+@media (min-width: 600px) {
+  .left {
+    display: flex;
+  }
+  .logo {
+    position: static;
+    margin-right: 16px;
+  }
+  .logo img {
+    height: 96px;
+    width: 96px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card {
+    padding-inline: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content {
+    margin-bottom: 0;
+  }
+  .info {
+    gap: 20px;
+  }
+  .new,
+  .featured {
+    padding-block: 8px;
+    padding-inline: 12px;
+    font-size: 16px;
+  }
+  .parent {
+    gap: 24px;
+  }
 }
