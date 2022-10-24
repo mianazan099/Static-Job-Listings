@@ -58,7 +58,7 @@ function render(data) {
 render(data);
 
 const tabletList = document.querySelectorAll(".tablet");
-const filterList = [];
+let filterList = [];
 const tablets = document.querySelector(".tablets");
 
 tabletList.forEach((tablet) => {
@@ -90,3 +90,16 @@ function pushNow() {
     });
   });
 }
+
+const clearBtn = document.querySelector(".clear");
+
+function clear() {
+  const tabletDiv = document.querySelectorAll(".tablets div");
+  tabletDiv.forEach((tablet) => {
+    tablet.remove();
+    filterList = [];
+    filterData(filterList);
+  });
+}
+
+clearBtn.addEventListener("click", clear);
