@@ -85,13 +85,13 @@ main {
   display: block;
 }
 
-.tablets {
+.search-tablets {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-.tablets > div {
+.search-tablets > div {
   color: var(--clr-cyan-500);
   background-color: var(--clr-cyan-50);
   cursor: pointer;
@@ -102,7 +102,7 @@ main {
   position: relative;
 }
 
-.tablets > div::after {
+.search-tablets > div::after {
   content: "✖";
   position: absolute;
   top: 0;
@@ -116,7 +116,7 @@ main {
   place-content: center;
 }
 
-.tablets > div:hover::after {
+.search-tablets > div:hover::after {
   background-color: var(--clr-cyan-900);
   transition: all 100ms;
 }
@@ -126,6 +126,7 @@ main {
   top: 50%;
   transform: translateY(-50%);
   right: 16px;
+  cursor: pointer;
 }
 
 .clear:hover {
@@ -199,6 +200,7 @@ main {
 .position {
   color: var(--clr-cyan-900);
   font-weight: 700;
+  cursor: pointer;
 }
 
 .position:hover {
