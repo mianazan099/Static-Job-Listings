@@ -310,21 +310,6 @@ hr {
     align-items: center;
     justify-content: space-between;
   }
-  .content {
-    /* margin-bottom: 0; */
-  }
-  .info {
-    /* gap: 20px; */
-  }
-  .new,
-  .featured {
-    /* padding-block: 8px; */
-    /* padding-inline: 12px; */
-    /* font-size: 16px; */
-  }
-  .parent {
-    /* gap: 24px; */
-  }
 
   hr {
     display: none;

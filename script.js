@@ -5,6 +5,7 @@ const searchTablets = document.querySelector(".search-tablets");
 const clearBtn = document.querySelector(".clear");
 const tabletList = document.querySelectorAll(".tablet");
 const searchList = [];
+
 function removeCards() {
   const cardList = document.querySelectorAll(".card");
   cardList.forEach((card) => card.remove());
